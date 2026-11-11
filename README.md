@@ -1,11 +1,11 @@
 # WebDesign3-LifeMap
 
-两份以真实地理为基础的交互网页作品。Halden Stories 把北美地图作为气候故事的入口，Life Map 用世界地图记录个人旅行足迹。
+两份以真实地理为基础的交互网页作品。Halden Stories 把北美地图作为气候故事的入口，猪的世界足迹用世界地图记录个人旅行足迹。
 
 | 作品 | HTML 文件 |
 | --- | --- |
 | Halden Stories · 北美气候故事 | [halden-stories.html](halden-stories.html) |
-| Life Map · 我的旅行地图 | [travel-map.html](travel-map.html) |
+| 猪的世界足迹 | [travel-map.html](travel-map.html) |
 
 两份作品均使用原生 HTML、CSS、内联 SVG 和 JavaScript。脚本、样式、地图路径与当前展示素材已内嵌在各自的 HTML 文件中。
 
@@ -28,21 +28,21 @@
 
 动态风景通过一个循环视频提供。Canvas 按格裁切视频帧，再由 SVG 区域轮廓裁切成地图填充；静态图承担视频就绪前的显示。人物卡片配合照片揭示、文字错峰进入和轻微视差。
 
-## Life Map · 我的旅行地图
+## 猪的世界足迹
 
-![Life Map 全屏旅行足迹地图](covers/life-map.png)
+![猪的世界足迹全屏地图](covers/life-map.png)
 
 以全屏地图承载 41 个旅行足迹。18 个地点提供简介和代表性参考照片，23 个地点以简洁标记呈现。地点可以使用城市、地区或国家的代表坐标，旅行时间和个人故事保留为可填写字段。
 
-页面延续暖纸色、细墨线与陶土色圆点，详情卡使用森林绿 `#234638`。中文采用系统无衬线字体，照片序号等辅助数字使用等宽字体。地图主体保持开阔，地点列表和详情在需要时展开。
+页面延续暖纸色、细墨线与陶土色圆点，详情卡使用森林绿 `#234638`。全页中英文和控件统一采用霞鹜文楷（LXGW WenKai）手写体。地图主体保持开阔，地点列表和详情在需要时展开。
 
 世界地图采用 Natural Earth 1 投影，包含南极洲。中国省级行政区、美国州与俄罗斯联邦主体的内部边界来自公开行政区划数据，并裁切到当前地图的国家轮廓内。
 
 ### 交互
 
-- 在世界、中国、俄罗斯和美国视图之间切换。
+- 在世界与中国视图之间切换。
 - 滚轮围绕指针位置缩放，按住并拖动地图，或使用右下角的缩放与全图按钮。
-- 点击足迹或展开地点列表，选择地点后查看简介、故事和照片。
+- 点击足迹或展开按国家分组的地点列表，选择地点后查看简介、故事和照片。
 - 聚焦地图后，方向键平移，`+` / `-` 缩放，`0` 返回全图；`Esc` 关闭详情和地点列表。
 - 窄屏中，地点详情显示为底部卡片。
 
@@ -53,7 +53,7 @@
 ```html
 <iframe
   src="travel-map.html?embed=1"
-  title="我的旅行地图"
+  title="猪的世界足迹"
   width="100%"
   height="420"
   style="border: 0"
@@ -116,4 +116,5 @@
 - 地点坐标与地名资料使用 GeoNames，并保留 CC BY 4.0 署名。地图页内也提供数据来源链接。[GeoNames 数据说明](https://download.geonames.org/export/dump/readme.txt) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - 旅行地图预置照片为城市或地区的代表性参考图。照片作者、原作链接、许可类型及缩放压缩说明已写入 HTML，并在相应地点详情中展示。使用照片时请遵循各自标明的许可。
 - Halden Stories 内嵌 Source Sans 3 与 IBM Plex Mono 字体，并在文件内保留字体许可说明。
+- 旅行地图内嵌霞鹜文楷（LXGW WenKai Regular），采用 SIL Open Font License 1.1，并在 HTML 中保留字体许可说明。[字体项目](https://github.com/lxgw/LxgwWenKai) · [字体许可](https://github.com/lxgw/LxgwWenKai/blob/main/OFL.txt)
 - Halden Stories 的风景、人物照片和循环视频来自项目提供的原始素材，其复用授权以原始素材权利人的许可为准。
